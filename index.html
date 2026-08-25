@@ -4,31 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jin Hong | Business Analytics</title>
+
   <style>
     :root {
-      --ink: #1f2529;
-      --muted: #687178;
-      --line: #e6e4df;
-      --paper: #fbfaf7;
-      --accent: #315a6b;
+      --ink: #312d29;
+      --muted: #716c66;
+      --line: #e4ded5;
+      --paper: #fcfaf6;
+      --accent: #6a553e;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       line-height: 1.6;
     }
 
-    nav, main {
+    nav,
+    main,
+    footer {
       max-width: 1120px;
       margin: auto;
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: 34px;
+      padding-right: 34px;
     }
 
     nav {
@@ -36,126 +44,193 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .brand { font-weight: 700; letter-spacing: .02em; }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    section {
-      border-top: 1px solid var(--line);
-      padding: 88px 0;
-    }
-
-    .hero {
-      border-top: 1px solid var(--line);
-      padding: 110px 0 96px;
-      min-height: 510px;
-      display: flex;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .2em;
-    }
-
-    h1 {
-      font-size: clamp(52px, 8vw, 92px);
-      line-height: .98;
-      letter-spacing: -.06em;
-      margin: 22px 0;
-    }
-
-    h2 {
-      font-size: 13px;
-      letter-spacing: .18em;
-      color: var(--muted);
-      margin: 0 0 30px;
-    }
-
-    .intro {
-      max-width: 720px;
-      color: #4e565c;
-      font-size: clamp(20px, 2.4vw, 28px);
-    }
-
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .button {
-      padding: 12px 18px;
-      border: 1px solid var(--line);
-      border-radius: 100px;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .button.primary {
-      color: white;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1.35fr .8fr;
-      gap: 90px;
-    }
-
-    .about-copy { font-size: 21px; margin: 0; }
-
-    .details div {
-      padding: 0 0 18px;
-      margin-bottom: 18px;
       border-bottom: 1px solid var(--line);
     }
 
-    .details strong {
+    .brand {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 21px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 450px;
+      padding: 90px 0 82px;
+    }
+
+    .eyebrow,
+    h2 {
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7.5vw, 82px);
+      font-weight: normal;
+      letter-spacing: -0.055em;
+      line-height: 1;
+      margin: 18px 0 25px;
+    }
+
+    .lede {
+      max-width: 710px;
+      margin: 0;
+      color: #4c4742;
+      font-size: clamp(18px, 2.15vw, 24px);
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .button {
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      border-radius: 50px;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    section {
+      padding: 76px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 30px;
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.25fr 0.72fr;
+      gap: 82px;
+    }
+
+    .copy {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .detail {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail strong {
       display: block;
-      font-size: 12px;
-      letter-spacing: .12em;
       margin-bottom: 3px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.13em;
     }
 
-    .details span { color: var(--muted); }
-
-    .project {
-      padding: 25px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .project h3 { margin: 0 0 8px; font-size: 24px; }
-    .project p { color: var(--muted); max-width: 690px; margin: 0; }
-
-    footer {
-      border-top: 1px solid var(--line);
-      max-width: 1120px;
-      margin: auto;
-      padding: 30px 32px 45px;
+    .detail span,
+    .project p {
       color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      nav a { display: none; }
-      .two-column { grid-template-columns: 1fr; gap: 40px; }
-      nav, main { padding-left: 22px; padding-right: 22px; }
-      footer { padding-left: 22px; padding-right: 22px; }
-      section { padding: 64px 0; }
+    .project {
+      padding: 23px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: normal;
+      letter-spacing: -0.025em;
+    }
+
+    .project p {
+      max-width: 650px;
+      margin: 0 0 14px;
+      line-height: 1.55;
+    }
+
+    .project a {
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding-top: 24px;
+      padding-bottom: 38px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      nav,
+      main,
+      footer {
+        padding-left: 21px;
+        padding-right: 21px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 64px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
     }
   </style>
 </head>
 
 <body>
   <nav>
-    <div class="brand">JINNY</div>
-    <div>
+    <div class="brand">Jin Hong</div>
+
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -165,48 +240,62 @@
 
   <main>
     <section class="hero">
-      <div>
-        <div class="eyebrow">BUSINESS ANALYTICS · OPERATIONS · ENERGY</div>
-        <h1>Jinny</h1>
-        <p class="intro">
-          I turn complex operational data into clear, practical decisions.
-          I bring a Chemical Engineering foundation and three years of refining
-          experience—from Data Analyst to Project Lead.
-        </p>
-        <div class="buttons">
-          <a class="button primary" href="mailto:yeojin9746@gmmail.com">Email me</a>
-          <a class="button" href="https://www.linkedin.com/yeojinhong/" target="_blank">LinkedIn</a>
-          <a class="button" href="#projects">View projects</a>
-        </div>
+      <div class="eyebrow">BUSINESS ANALYTICS · OPERATIONS · ENERGY</div>
+
+      <h1>Hi, I’m Jin.</h1>
+
+      <p class="lede">
+        I’m a business analytics graduate student with a Chemical Engineering
+        background and three years in refining. I like taking messy operational
+        questions and making them easier for people to understand and act on.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="mailto:yeojin9746@gmail.com">
+          yeojin9746@gmail.com
+        </a>
+
+        <a class="button" href="https://www.linkedin.com/in/yeojinhong/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a class="button" href="#projects">My work</a>
       </div>
     </section>
 
     <section id="about">
-      <h2>01 · ABOUT</h2>
-      <div class="two-column">
-        <p class="about-copy">
-          I am a Master’s student in Business Analytics who combines technical
-          depth with real-world industrial experience. I enjoy finding the
-          story in data and using it to improve decisions, processes, and
-          outcomes.
+      <h2>01 · A LITTLE ABOUT ME</h2>
+
+      <div class="split">
+        <p class="copy">
+          Before starting my master’s at CSU East Bay, I spent three years in
+          the refining industry—first as a Data Analyst and later as a Project
+          Lead. That experience taught me that the best analysis is not just
+          technically correct; it makes someone’s next decision clearer. I’m
+          now building deeper analytics skills while keeping one foot in the
+          real-world operations I know well.
         </p>
 
-        <div class="details">
-          <div>
-            <strong>NOW</strong>
-            <span>Master’s in Business Analytics<br>CSU East Bay · Expected 2026</span>
+        <div>
+          <div class="detail">
+            <strong>RIGHT NOW</strong>
+            <span>M.S. Business Analytics<br>CSU East Bay · 2026</span>
           </div>
-          <div>
-            <strong>FOUNDATION</strong>
-            <span>B.S. in Chemical Engineering<br>UC Berkeley</span>
+
+          <div class="detail">
+            <strong>WHERE I STARTED</strong>
+            <span>B.S. Chemical Engineering<br>UC Berkeley · 2022</span>
           </div>
-          <div>
-            <strong>EXPERIENCE</strong>
+
+          <div class="detail">
+            <strong>WHAT I’VE DONE</strong>
             <span>Refining industry<br>Data Analyst → Project Lead · 3 years</span>
           </div>
-          <div>
-            <strong>FOCUS</strong>
-            <span>Operations analytics · Decision support · Process improvement</span>
+
+          <div class="detail">
+            <strong>WHAT I’M INTO</strong>
+            <span>Analytics · Operations · Better decisions</span>
           </div>
         </div>
       </div>
@@ -214,40 +303,63 @@
 
     <section id="experience">
       <h2>02 · EXPERIENCE</h2>
+
       <div class="project">
-        <h3>Refining Industry — Data Analyst to Project Lead</h3>
+        <h3>From Data Analyst to Project Lead</h3>
         <p>
-          Supported data-informed operations and progressed into cross-functional
-          project leadership, translating technical work into clear priorities
-          for teams and stakeholders.
+          Three years in refining, working with operational data and
+          cross-functional teams in an industry where context matters as much
+          as the numbers.
         </p>
       </div>
     </section>
 
     <section id="projects">
-      <h2>03 · SELECTED PROJECTS</h2>
+      <h2>03 · PROJECTS</h2>
 
       <div class="project">
-        <h3>Operations Performance Dashboard</h3>
-        <p>Coming soon — an analytics project focused on operational visibility and performance improvement.</p>
+        <h3>Sales Dashboard</h3>
+        <p>
+          An interactive Tableau dashboard that explores sales performance
+          through clear visual storytelling and decision-focused metrics.
+        </p>
+
+        <a href="https://public.tableau.com/views/SalesDashboardProject_17877002967540/SalesDashboard?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
+           target="_blank" rel="noopener noreferrer">
+          Explore the interactive dashboard →
+        </a>
       </div>
 
       <div class="project">
-        <h3>Forecasting & Decision Support</h3>
-        <p>Coming soon — a business analytics project using data to anticipate trends and support planning.</p>
+        <h3>More to come</h3>
+        <p>
+          I’m currently building projects in operations analytics, forecasting,
+          and process improvement.
+        </p>
       </div>
     </section>
 
     <section id="contact">
-      <h2>04 · CONTACT</h2>
-      <p class="about-copy">Let’s connect about analytics, operations, and meaningful problem-solving.</p>
-      <div class="buttons">
-        <a class="button primary" href="mailto:yeojin9746@gmail.com">Email me</a>
-        <a class="button" href="https://www.linkedin.com/yeojinhong/" target="_blank">LinkedIn</a>
+      <h2>04 · LET’S CONNECT</h2>
+
+      <p class="copy">
+        I’m always happy to talk about analytics, operations, or navigating a
+        career pivot.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="mailto:yeojin9746@gmail.com">
+          Email Jin
+        </a>
+
+        <a class="button" href="https://www.linkedin.com/in/yeojinhong/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 Jin Hong · Built with GitHub Pages</footer>
+  <footer>© 2026 Jin Hong</footer>
 </body>
 </html>
