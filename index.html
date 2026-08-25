@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jinny | Business Analytics</title>
+  <style>
+    :root {
+      --ink: #1f2529;
+      --muted: #687178;
+      --line: #e6e4df;
+      --paper: #fbfaf7;
+      --accent: #315a6b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav, main {
+      max-width: 1120px;
+      margin: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand { font-weight: 700; letter-spacing: .02em; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 88px 0;
+    }
+
+    .hero {
+      border-top: 1px solid var(--line);
+      padding: 110px 0 96px;
+      min-height: 510px;
+      display: flex;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    h1 {
+      font-size: clamp(52px, 8vw, 92px);
+      line-height: .98;
+      letter-spacing: -.06em;
+      margin: 22px 0;
+    }
+
+    h2 {
+      font-size: 13px;
+      letter-spacing: .18em;
+      color: var(--muted);
+      margin: 0 0 30px;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: #4e565c;
+      font-size: clamp(20px, 2.4vw, 28px);
+    }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button {
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      color: white;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.35fr .8fr;
+      gap: 90px;
+    }
+
+    .about-copy { font-size: 21px; margin: 0; }
+
+    .details div {
+      padding: 0 0 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .details strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .12em;
+      margin-bottom: 3px;
+    }
+
+    .details span { color: var(--muted); }
+
+    .project {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project h3 { margin: 0 0 8px; font-size: 24px; }
+    .project p { color: var(--muted); max-width: 690px; margin: 0; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      max-width: 1120px;
+      margin: auto;
+      padding: 30px 32px 45px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      nav a { display: none; }
+      .two-column { grid-template-columns: 1fr; gap: 40px; }
+      nav, main { padding-left: 22px; padding-right: 22px; }
+      footer { padding-left: 22px; padding-right: 22px; }
+      section { padding: 64px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="brand">JINNY</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">BUSINESS ANALYTICS · OPERATIONS · ENERGY</div>
+        <h1>Jinny</h1>
+        <p class="intro">
+          I turn complex operational data into clear, practical decisions.
+          I bring a Chemical Engineering foundation and three years of refining
+          experience—from Data Analyst to Project Lead.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="mailto:YOUR-EMAIL@example.com">Email me</a>
+          <a class="button" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          <a class="button" href="#projects">View projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>01 · ABOUT</h2>
+      <div class="two-column">
+        <p class="about-copy">
+          I am a Master’s student in Business Analytics who combines technical
+          depth with real-world industrial experience. I enjoy finding the
+          story in data and using it to improve decisions, processes, and
+          outcomes.
+        </p>
+
+        <div class="details">
+          <div>
+            <strong>NOW</strong>
+            <span>Master’s in Business Analytics<br>[University] · Expected [Year]</span>
+          </div>
+          <div>
+            <strong>FOUNDATION</strong>
+            <span>B.S. in Chemical Engineering<br>[University]</span>
+          </div>
+          <div>
+            <strong>EXPERIENCE</strong>
+            <span>Refining industry<br>Data Analyst → Project Lead · 3 years</span>
+          </div>
+          <div>
+            <strong>FOCUS</strong>
+            <span>Operations analytics · Decision support · Process improvement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>02 · EXPERIENCE</h2>
+      <div class="project">
+        <h3>Refining Industry — Data Analyst to Project Lead</h3>
+        <p>
+          Supported data-informed operations and progressed into cross-functional
+          project leadership, translating technical work into clear priorities
+          for teams and stakeholders.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>03 · SELECTED PROJECTS</h2>
+
+      <div class="project">
+        <h3>Operations Performance Dashboard</h3>
+        <p>Coming soon — an analytics project focused on operational visibility and performance improvement.</p>
+      </div>
+
+      <div class="project">
+        <h3>Forecasting & Decision Support</h3>
+        <p>Coming soon — a business analytics project using data to anticipate trends and support planning.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>04 · CONTACT</h2>
+      <p class="about-copy">Let’s connect about analytics, operations, and meaningful problem-solving.</p>
+      <div class="buttons">
+        <a class="button primary" href="mailto:YOUR-EMAIL@example.com">Email me</a>
+        <a class="button" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Jinny · Built with GitHub Pages</footer>
+</body>
+</html>
