@@ -7,12 +7,13 @@
 
   <style>
     :root {
-      --ink: #312d29;
-      --muted: #716c66;
-      --line: #e4ded5;
-      --paper: #f5f1e9;
-      --card: #fffdf9;
-      --accent: #6a553e;
+      --ink: #292624;
+      --muted: #6d6862;
+      --line: #ded8cf;
+      --paper: #f1eee7;
+      --card: #fbfaf7;
+      --accent: #554d46;
+      --google-sans: "Google Sans", "Google Sans Text", "Product Sans", Arial, sans-serif;
     }
 
     * {
@@ -66,12 +67,12 @@
     }
 
     .hero {
-      min-height: 610px;
-      padding: 120px 26px 132px;
+      min-height: 660px;
+      padding: 138px 26px 152px;
       border-top: 0;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
-      gap: 104px;
+      gap: 118px;
       align-items: center;
     }
 
@@ -90,7 +91,7 @@
     }
 
     h1 {
-      font-size: clamp(66px, 9vw, 126px);
+      font-size: clamp(72px, 9.6vw, 115px);
       font-weight: normal;
       letter-spacing: -0.055em;
       line-height: 1;
@@ -98,10 +99,11 @@
     }
 
     .lede {
-      max-width: 760px;
+      max-width: 790px;
       margin: 0;
       color: #4c4742;
-      font-size: clamp(21px, 2.1vw, 28px);
+      font-family: var(--google-sans);
+      font-size: clamp(15px, 2.1vw, 20px);
       line-height: 1.55;
     }
 
@@ -129,20 +131,32 @@
     }
 
     section:not(.hero) {
-      margin-bottom: 30px;
-      padding: 72px;
+      margin-bottom: 46px;
+      padding: clamp(52px, 6vw, 100px);
       border: 1px solid var(--line);
       background: var(--card);
+      border-radius: 24px;
     }
 
     h2 {
-      margin: 0 0 38px;
+      max-width: 820px;
+      margin: 0 0 48px;
       color: var(--ink);
       font-family: "Times New Roman", Times, serif;
-      font-size: clamp(36px, 4vw, 56px);
+      font-size: clamp(42px, 4.6vw, 50px);
       font-weight: normal;
       letter-spacing: -0.045em;
       line-height: 1.05;
+    }
+
+    .section-label {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      line-height: 1.5;
     }
 
     .split {
@@ -153,6 +167,7 @@
 
     .copy {
       margin: 0;
+      font-family: var(--google-sans);
       font-size: 21px;
       line-height: 1.7;
     }
@@ -173,19 +188,21 @@
 
     .detail span {
       color: var(--muted);
+      font-family: var(--google-sans);
       font-size: 17px;
     }
 
     .project {
-      padding: 46px 50px;
-      margin-top: 22px;
+      padding: clamp(34px, 4vw, 58px);
+      margin-top: 28px;
       border: 1px solid var(--line);
       background: #ffffff;
+      border-radius: 18px;
     }
 
     .project h3 {
       margin: 0 0 15px;
-      font-size: clamp(30px, 3vw, 42px);
+      font-size: clamp(34px, 3.4vw, 48px);
       font-weight: normal;
       letter-spacing: -0.025em;
     }
@@ -194,6 +211,7 @@
       max-width: 980px;
       margin: 0 0 17px;
       color: var(--muted);
+      font-family: var(--google-sans);
       font-size: 18px;
       line-height: 1.7;
     }
@@ -217,6 +235,7 @@
       margin-top: 30px;
       border: 1px solid var(--line);
       background: white;
+      border-radius: 12px;
     }
 
       .hobbies {
@@ -230,6 +249,22 @@
         padding: 28px;
         border: 1px solid var(--line);
         background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .hobby-image {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        margin-bottom: 24px;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+      }
+
+      .hobby-image.portrait {
+        object-position: center top;
       }
 
       .hobby h3 {
@@ -241,6 +276,7 @@
       .hobby p {
         margin: 0;
         color: var(--muted);
+        font-family: var(--google-sans);
         font-size: 17px;
         line-height: 1.6;
       }
@@ -323,6 +359,7 @@
       aspect-ratio: 1200 / 800;
       border: 1px solid #d8d3cb;
       background: #fff;
+      border-radius: 12px;
       overflow: hidden;
     }
 
@@ -445,7 +482,8 @@
     </section>
 
     <section id="about">
-      <h2>01 · A LITTLE ABOUT ME</h2>
+      <p class="section-label">// ABOUT ME</p>
+      <h2>Making operational questions easier to act on.</h2>
 
       <div class="split">
         <p class="copy">
@@ -482,7 +520,8 @@
     </section>
 
     <section id="experience">
-      <h2>02 · EXPERIENCE</h2>
+      <p class="section-label">// EXPERIENCE</p>
+      <h2>From refinery operations to business analytics.</h2>
 
       <div class="project">
         <h3>From Data Analyst to Project Lead</h3>
@@ -495,7 +534,8 @@
     </section>
 
     <section id="projects">
-      <h2>03 · PROJECTS</h2>
+      <p class="section-label">// PROJECTS</p>
+      <h2>A few things I’ve built and explored.</h2>
 
       <article class="project">
         <p class="eyebrow">Tableau · Data Visualization</p>
@@ -596,7 +636,8 @@
     </section>
 
     <section id="beyond-work">
-      <h2>04 · OUTSIDE OF WORK</h2>
+      <p class="section-label">// OUTSIDE OF WORK</p>
+      <h2>The things that keep me curious.</h2>
 
       <p class="copy">
         Outside of work and school, I like getting outdoors, learning new
@@ -605,16 +646,19 @@
 
       <div class="hobbies">
         <article class="hobby">
+          <img class="hobby-image" src="hiking.jpg" alt="Jin hiking outdoors">
           <h3>Hiking</h3>
           <p>Getting outside for a trail, a view, and a reset.</p>
         </article>
 
         <article class="hobby">
+          <img class="hobby-image portrait" src="bjj.jpg" alt="Jin practicing Brazilian jiu-jitsu">
           <h3>Brazilian jiu-jitsu</h3>
           <p>A practice in patience, problem-solving, and showing up.</p>
         </article>
 
         <article class="hobby">
+          <img class="hobby-image portrait" src="travel.jpg" alt="Jin traveling">
           <h3>Traveling</h3>
           <p>Exploring new places, food, and the everyday details that make a city feel lived in.</p>
         </article>
@@ -622,7 +666,8 @@
     </section>
 
     <section id="contact">
-      <h2>05 · LET’S CONNECT</h2>
+      <p class="section-label">// LET’S CONNECT</p>
+      <h2>Let’s talk.</h2>
 
       <p class="copy">
         I’m always happy to talk about analytics, operations, or navigating a
