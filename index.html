@@ -67,6 +67,15 @@
     .hero {
       min-height: 450px;
       padding: 90px 0 82px;
+      border-top: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      min-width: 0;
     }
 
     .eyebrow,
@@ -76,6 +85,7 @@
       font-size: 11px;
       font-weight: bold;
       letter-spacing: 0.14em;
+      line-height: 1.5;
     }
 
     h1 {
@@ -216,7 +226,30 @@
 
       .hero {
         min-height: auto;
-        padding: 64px 0;
+        padding: 36px 0 56px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        letter-spacing: 0.1em;
+      }
+
+      .profile-photo {
+        order: -1;
+        width: 200px;
+        height: 200px;
+        margin-inline: auto;
+      }
+
+      .lede {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .actions {
+        justify-content: center;
       }
 
       section {
@@ -225,25 +258,31 @@
     }
 
     .tableau-embed {
+      position: relative;
       margin-top: 2rem;
+      aspect-ratio: 1200 / 800;
       border: 1px solid #d8d3cb;
       background: #fff;
     }
 
     .tableau-embed iframe {
+      position: absolute;
+      inset: 0;
       display: block;
       width: 100%;
+      height: 100%;
       border: 0;
     }
 
     .profile-photo {
-      width: 190px;
-      height: 190px;
-      object-fit: cover;  
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      object-position: 50% 18%;
       border-radius: 50%;
       display: block;
-      margin: 2rem 0;
-      border: 1px solid #d8d3cb;
+      border: 1px solid var(--line);
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -262,32 +301,38 @@
 
   <main>
     <section class="hero">
-      <div class="eyebrow">BUSINESS ANALYTICS · OPERATIONS · ENERGY</div>
+      <div class="hero-copy">
+        <div class="eyebrow">BUSINESS ANALYTICS · OPERATIONS · ENERGY</div>
 
-      <h1>Hi, I’m Jin.</h1>
+        <h1>Hi, I’m Jin.</h1>
 
-      <p class="lede">
-        I’m a business analytics graduate student with a Chemical Engineering
-        background and three years in refining. I like taking messy operational
-        questions and making them easier for people to understand and act on.
-      </p>
-      <img
-      class="profile-photo"
-      src="profile_photo.jpg"
-      alt="Portrait of Jin Hong">
+        <p class="lede">
+          I’m a business analytics graduate student with a Chemical Engineering
+          background and three years in refining. I like taking messy operational
+          questions and making them easier for people to understand and act on.
+        </p>
 
-      <div class="actions">
-        <a class="button primary" href="mailto:yeojin9746@gmail.com">
-          yeojin9746@gmail.com
-        </a>
+        <div class="actions">
+          <a class="button primary" href="mailto:yeojin9746@gmail.com">
+            yeojin9746@gmail.com
+          </a>
 
-        <a class="button" href="https://www.linkedin.com/in/yeojinhong/"
-           target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
+          <a class="button" href="https://www.linkedin.com/in/yeojinhong/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
 
-        <a class="button" href="#projects">My work</a>
+          <a class="button" href="#projects">My work</a>
+        </div>
       </div>
+
+      <img
+        class="profile-photo"
+        src="profile.jpg"
+        alt="Portrait of Jin Hong"
+        width="320"
+        height="320"
+      >
     </section>
 
     <section id="about">
@@ -358,8 +403,8 @@
           <iframe
             title="Sales Dashboard"
             src="https://public.tableau.com/views/SalesDashboardProject_17877002967540/SalesDashboard?:showVizHome=no"
-            width="100%"
-            height="700"
+            width="1200"
+            height="800"
             frameborder="0"
             allowfullscreen>
           </iframe>
