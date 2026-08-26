@@ -10,7 +10,8 @@
       --ink: #312d29;
       --muted: #716c66;
       --line: #e4ded5;
-      --paper: #fcfaf6;
+      --paper: #f5f1e9;
+      --card: #fffdf9;
       --accent: #6a553e;
     }
 
@@ -33,14 +34,14 @@
     nav,
     main,
     footer {
-      max-width: 1120px;
+      max-width: 1440px;
       margin: auto;
-      padding-left: 34px;
-      padding-right: 34px;
+      padding-left: 48px;
+      padding-right: 48px;
     }
 
     nav {
-      height: 70px;
+      height: 86px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -48,15 +49,15 @@
     }
 
     .brand {
-      font-size: 15px;
+      font-size: 19px;
       font-weight: bold;
     }
 
     .nav-links {
       display: flex;
-      gap: 21px;
+      gap: 28px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
+      font-size: 16px;
     }
 
     .nav-links a {
@@ -65,12 +66,12 @@
     }
 
     .hero {
-      min-height: 450px;
-      padding: 90px 0 82px;
+      min-height: 610px;
+      padding: 120px 26px 132px;
       border-top: 0;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
-      gap: 48px;
+      gap: 104px;
       align-items: center;
     }
 
@@ -82,42 +83,42 @@
     h2 {
       color: var(--accent);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
+      font-size: 13px;
       font-weight: bold;
       letter-spacing: 0.14em;
       line-height: 1.5;
     }
 
     h1 {
-      font-size: clamp(52px, 7.5vw, 82px);
+      font-size: clamp(66px, 9vw, 126px);
       font-weight: normal;
       letter-spacing: -0.055em;
       line-height: 1;
-      margin: 18px 0 25px;
+      margin: 20px 0 30px;
     }
 
     .lede {
-      max-width: 710px;
+      max-width: 760px;
       margin: 0;
       color: #4c4742;
-      font-size: clamp(18px, 2.15vw, 24px);
-      line-height: 1.65;
+      font-size: clamp(21px, 2.1vw, 28px);
+      line-height: 1.55;
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 28px;
+      margin-top: 36px;
     }
 
     .button {
-      padding: 11px 16px;
+      padding: 13px 19px;
       border: 1px solid var(--line);
       border-radius: 50px;
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
+      font-size: 16px;
       text-decoration: none;
     }
 
@@ -127,26 +128,33 @@
       color: white;
     }
 
-    section {
-      padding: 76px 0;
-      border-top: 1px solid var(--line);
+    section:not(.hero) {
+      margin-bottom: 30px;
+      padding: 72px;
+      border: 1px solid var(--line);
+      background: var(--card);
     }
 
     h2 {
-      margin: 0 0 30px;
-      color: var(--muted);
+      margin: 0 0 38px;
+      color: var(--ink);
+      font-family: "Times New Roman", Times, serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: normal;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
     }
 
     .split {
       display: grid;
-      grid-template-columns: 1.25fr 0.72fr;
-      gap: 82px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.72fr);
+      gap: 110px;
     }
 
     .copy {
       margin: 0;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 21px;
+      line-height: 1.7;
     }
 
     .detail {
@@ -159,38 +167,41 @@
       display: block;
       margin-bottom: 3px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.13em;
     }
 
-    .detail span,
-    .project p {
+    .detail span {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 17px;
     }
 
     .project {
-      padding: 23px 0;
-      border-top: 1px solid var(--line);
+      padding: 46px 50px;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      background: #ffffff;
     }
 
     .project h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
+      margin: 0 0 15px;
+      font-size: clamp(30px, 3vw, 42px);
       font-weight: normal;
       letter-spacing: -0.025em;
     }
 
     .project p {
-      max-width: 650px;
-      margin: 0 0 14px;
-      line-height: 1.55;
+      max-width: 980px;
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     .project a {
       color: var(--accent);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: bold;
       text-decoration: none;
     }
@@ -199,12 +210,47 @@
       text-decoration: underline;
     }
 
+    .project-chart {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 30px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+      .hobbies {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .hobby {
+        padding: 28px;
+        border: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .hobby h3 {
+        margin: 0 0 8px;
+        font-size: 25px;
+        font-weight: normal;
+      }
+
+      .hobby p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
     footer {
       padding-top: 24px;
       padding-bottom: 38px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 12px;
+      font-size: 14px;
     }
 
     @media (max-width: 650px) {
@@ -224,6 +270,10 @@
         gap: 38px;
       }
 
+      .hobbies {
+        grid-template-columns: 1fr;
+      }
+
       .hero {
         min-height: auto;
         padding: 36px 0 56px;
@@ -236,10 +286,9 @@
         letter-spacing: 0.1em;
       }
 
-      .profile-photo {
+      .profile-frame {
         order: -1;
-        width: 200px;
-        height: 200px;
+        width: 180px;
         margin-inline: auto;
       }
 
@@ -252,17 +301,29 @@
         justify-content: center;
       }
 
-      section {
-        padding: 60px 0;
+      section:not(.hero) {
+        margin-bottom: 18px;
+        padding: 38px 26px;
+      }
+
+      .project {
+        padding: 32px 26px;
+      }
+
+      .project h3 {
+        font-size: 31px;
       }
     }
 
     .tableau-embed {
       position: relative;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
+      width: 100%;
+      margin-left: 0;
       aspect-ratio: 1200 / 800;
       border: 1px solid #d8d3cb;
       background: #fff;
+      overflow: hidden;
     }
 
     .tableau-embed iframe {
@@ -274,15 +335,57 @@
       border: 0;
     }
 
-    .profile-photo {
-      width: 320px;
-      height: 320px;
-      object-fit: cover;
-      object-position: 50% 18%;
-      border-radius: 50%;
-      display: block;
-      border: 1px solid var(--line);
+    @media (max-width: 650px) {
+      .tableau-embed {
+        width: 100%;
+        margin-left: 0;
+        aspect-ratio: 1 / 1.15;
+      }
+    }
+
+    .profile-frame {
+      position: relative;
+      width: 300px;
+      aspect-ratio: 1086 / 1448;
       flex-shrink: 0;
+    }
+
+    .profile-frame::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: -7px;
+      border: 5px solid #c73342;
+      pointer-events: none;
+      transform: rotate(-1deg);
+    }
+
+    .profile-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #f7f2e8;
+    }
+
+    .sketch-outline {
+      position: absolute;
+      z-index: 3;
+      inset: -85px -42px;
+      width: calc(100% + 84px);
+      height: calc(100% + 150px);
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .sketch-outline path {
+      fill: none;
+      stroke: #c73342;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
   </style>
 </head>
@@ -295,6 +398,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#beyond-work">Beyond work</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -326,13 +430,18 @@
         </div>
       </div>
 
-      <img
-        class="profile-photo"
-        src="profile.jpg"
-        alt="Portrait of Jin Hong"
-        width="320"
-        height="320"
-      >
+      <div class="profile-frame">
+        <svg class="sketch-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M10 15 C10 5 18 5 18 15 C18 5 26 5 26 15 C26 5 34 5 34 15 C34 5 42 5 42 15 C42 5 50 5 50 15 C50 5 58 5 58 15 C58 5 66 5 66 15 C66 5 74 5 74 15 C74 5 82 5 82 15 C82 5 90 5 90 15 C100 15 100 23 90 23 C100 23 100 31 90 31 C100 31 100 39 90 39 C100 39 100 47 90 47 C100 47 100 55 90 55 C100 55 100 63 90 63 C100 63 100 71 90 71 C100 71 100 79 90 79 C100 79 100 87 90 87 C90 97 82 97 82 87 C82 97 74 97 74 87 C74 97 66 97 66 87 C66 97 58 97 58 87 C58 97 50 97 50 87 C50 97 42 97 42 87 C42 97 34 97 34 87 C34 97 26 97 26 87 C26 97 18 97 18 87 C18 97 10 97 10 87 C0 87 0 79 10 79 C0 79 0 71 10 71 C0 71 0 63 10 63 C0 63 0 55 10 55 C0 55 0 47 10 47 C0 47 0 39 10 39 C0 39 0 31 10 31 C0 31 0 23 10 23 C0 23 0 15 10 15 Z" />
+        </svg>
+        <img
+          class="profile-photo"
+          src="profile.jpg"
+          alt="Portrait of Jin Hong"
+          width="1086"
+          height="1448"
+        >
+      </div>
     </section>
 
     <section id="about">
@@ -386,26 +495,44 @@
     </section>
 
     <section id="projects">
-      <p class="section-label">03 · Projects</p>
-      <h2>Things I’m building</h2>
+      <h2>03 · PROJECTS</h2>
 
       <article class="project">
         <p class="eyebrow">Tableau · Data Visualization</p>
-        <h3>Sales Dashboard</h3>
+        <h3>Sales & Customer Dashboards</h3>
 
         <p>
-          An interactive dashboard exploring sales performance, product trends,
-          and regional patterns. I built it to turn raw sales data into a clearer
-          story someone could use to make decisions.
+          This interactive Tableau project includes separate Sales and Customer dashboards 
+          designed to help sales managers and executives quickly understand performance.
+        </p>
+
+        <p>
+          Both dashboards shows three key KPIs on the top where the previous year's KPIs are also shown for comparison.
+          The Sales Dashboard brings together sales, profit, and quantity KPIs, 
+          monthly and weekly trends, and product subcategory comparisons. It makes high and low performing 
+          periods easier to spot, including weeks above or below average sales and profit.
+        </p>
+
+        <p>
+          The Customer Dashboard focuses on customer behavior and value, with
+          customer distribution by number of orders and the top 10 customers by profit. 
+        </p>
+
+        <p>
+          The Customer Dashboard focuses on customer behavior and value, with
+          customer distribution by number of orders and the top 10 customers by profit. 
+        </p>
+
+        <p>
+          Buttons make it easy to move between the two dashboards, while year selection and
+          filters for product category, subcategory, region, state, and city let
+          users explore the data from different angles.
         </p>
 
         <div class="tableau-embed">
           <iframe
             title="Sales Dashboard"
             src="https://public.tableau.com/views/SalesDashboardProject_17877002967540/SalesDashboard?:showVizHome=no"
-            width="1200"
-            height="800"
-            frameborder="0"
             allowfullscreen>
           </iframe>
         </div>
@@ -414,24 +541,88 @@
           <a
             href="https://public.tableau.com/views/SalesDashboardProject_17877002967540/SalesDashboard?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
             target="_blank"
-            rel="noreferrer">
+            rel="noopener noreferrer">
             Open the dashboard in Tableau Public →
           </a>
         </p>
       </article>
+
+      <article class="project">
+        <p class="eyebrow">R · TIME SERIES FORECASTING</p>
+        <h3>Forecasting U.S. Gasoline Station Sales</h3>
+        <p>
+          A time-series forecasting project using 359 monthly observations of
+          U.S. gasoline station sales from 1996 through 2025. My team compared
+          regression models with trend and seasonality, a two-level model,
+          Holt-Winters exponential smoothing, and ARIMA to forecast sales for
+          the following 13 months.
+        </p>
+        <p>
+          After evaluating the models with RMSE and MAPE, we selected a
+          Holt-Winters model for the final forecast. Its 2.792% MAPE and ability
+          to respond to recent shifts in the series made it a useful choice for
+          near-term planning in a changing market.
+        </p>
+
+        <img
+          class="project-chart"
+          src="gasoline-sales-forecast.png"
+          alt="Holt-Winters forecast of U.S. gasoline station sales through 2026">
+      </article>
+
+      <article class="project">
+        <p class="eyebrow">WEB SCRAPING · DATA ANALYTICS</p>
+        <h3>AI vs. Data Science Job Market Analysis</h3>
+        <p>
+          A job-market analysis comparing 920 AI/ML and Data Science job
+          postings. My team used Selenium and BeautifulSoup to collect posting
+          information, then transformed unstructured text into fields for
+          skills, education requirements, salary, work arrangement, and
+          geographic analysis.
+        </p>
+        <p>
+          We found substantial overlap between AI and Data Science skill sets,
+          alongside differences in compensation and location. The analysis
+          highlighted a Bay Area salary premium, with a median salary of $140K
+          compared with $101K elsewhere in the U.S., helping job seekers better
+          understand where opportunities and pay vary across the market.
+        </p>
+
+        <img
+          class="project-chart"
+          src="ai-ds-job-market-analysis.png"
+          alt="Bay Area salary premium for AI and Data Science roles">
+      </article>
     </section>
 
-      <div class="project">
-        <h3>More to come</h3>
-        <p>
-          I’m currently building projects in operations analytics, forecasting,
-          and process improvement.
-        </p>
+    <section id="beyond-work">
+      <h2>04 · OUTSIDE OF WORK</h2>
+
+      <p class="copy">
+        Outside of work and school, I like getting outdoors, learning new
+        things, and finding my way around a new place.
+      </p>
+
+      <div class="hobbies">
+        <article class="hobby">
+          <h3>Hiking</h3>
+          <p>Getting outside for a trail, a view, and a reset.</p>
+        </article>
+
+        <article class="hobby">
+          <h3>Brazilian jiu-jitsu</h3>
+          <p>A practice in patience, problem-solving, and showing up.</p>
+        </article>
+
+        <article class="hobby">
+          <h3>Traveling</h3>
+          <p>Exploring new places, food, and the everyday details that make a city feel lived in.</p>
+        </article>
       </div>
     </section>
 
     <section id="contact">
-      <h2>04 · LET’S CONNECT</h2>
+      <h2>05 · LET’S CONNECT</h2>
 
       <p class="copy">
         I’m always happy to talk about analytics, operations, or navigating a
